@@ -104,6 +104,26 @@ After a few exploration at the data, fortunately, there are no missing values.
 All datatypes also tidy, already numeric.
 
 ### Exploratory Data Analysis
-- View data from basic feature of a house: Bedroom, Bathroom, Floors  
+> Viewing data from basic features of a house: Bedroom, Bathroom, Floors  
+```python
+f, axes = plt.subplots(1, 3,figsize=(32,8))
+sns.boxplot(x=df['bedrooms'],y=df['price'], palette='YlOrRd',ax=axes[0])
+sns.violinplot(x=df['floors'],y=df['price'],palette='YlOrRd', ax=axes[1])
+sns.boxplot(x=df['bathrooms'],y=df['price'], palette='YlOrRd',ax=axes[2])
+plt.xticks(rotation=90)
+```
 
-[![img2.png](https://i.postimg.cc/TPBHVgm7/img2.png)](https://postimg.cc/LqBTRqxL) [![img4.png](https://i.postimg.cc/bNqV9zDh/img4.png)](https://postimg.cc/5jkmxWS7)
+[![img3.png](https://i.postimg.cc/q7gvhVXc/img3.png)](https://postimg.cc/cKyS2zz6)  
+
+> Viewing data from other features of the houses
+
+[![img2.png](https://i.postimg.cc/xCMJ8Vnx/img2.png)](https://postimg.cc/6265bS7n)  
+
+[![img5.png](https://i.postimg.cc/NGnSBh5q/img5.png)](https://postimg.cc/jCzZ4FHZ)  
+
+- It seems grade has positive linear relationship with price, waterfront also shows quite significant impact on price. View doesnt show a strong linear relationship, whilst from condition, we could see most of the house are on 3rd grade.
+- From sqft_living and sqft_above pretty much shown a positive linear relationship.
+- We could see not all house has a basement and from sqft lot shows non positve-linear relationship, which I thought the bigger the sqft lot the higher price it would be.
+
+> Display the area of the houses in Seattle and I marked  
+[![img6.png](https://i.postimg.cc/1tVm5Gcy/img6.png)](https://postimg.cc/S2qFgzvP)
