@@ -125,6 +125,38 @@ plt.xticks(rotation=90)
 - From sqft_living and sqft_above pretty much shown a positive linear relationship.
 - We could see not all house has a basement and from sqft lot shows non positve-linear relationship, which I thought the bigger the sqft lot the higher price it would be.
 
-> Display the area of the houses in Seattle and I marked  
+> Display the area of the houses in Seattle and I marked top 100 most expensive area around the neighborhood.
+```python
+df_new = df[df['price']>=2000000].sort_values('price',ascending=False).head(100)
+df_new.reset_index(inplace=True)
+
+map1 = folium.Map(
+    location=[47.5316, -122.233],
+    zoom_start=10.5,
+    tiles='cartodbdark_matter'
+)
+
+for i in range(len(df_new['id'])):
+    lat,lon= df_new['lat'][i],df_new['long'][i]
+    df_tooltips = "Price"
+    df_popup= f"Price ${df_new['price'][i]:,} Zipcode: {df_new['zipcode'][i]}"
+    icons = folium.Icon(color='lightgray',icon_size=(35,35))
+
+    folium.Marker(
+        [lat,lon],
+        popup= df_popup,
+        icon = icons
+    ).add_to(map1)
+
+HeatMap(
+    data=df.loc[:, ['lat', 'long', 'price']],
+    radius=10
+).add_to(map1)
+
+map1
+```
 [![img6.png](https://i.postimg.cc/pX4BmRHx/img6.png)](https://postimg.cc/ZCPNgknD)  
 
+#### Check the correlation between features
+
+[![img7.png](https://i.postimg.cc/BQkd4r7P/img7.png)](https://postimg.cc/3djLZcT3)
