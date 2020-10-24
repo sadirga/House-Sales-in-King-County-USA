@@ -1,6 +1,6 @@
 # House-Sales-in-King-County-USA
 ## Predicting House Prices  
-The dataset is from Kaggle [https://www.kaggle.com/harlfoxem/housesalesprediction]   
+The dataset is from Kaggle [House Sales in King County USA](https://www.kaggle.com/harlfoxem/housesalesprediction])   
 [![dataset-original.jpg](https://i.postimg.cc/xC836Xfh/dataset-original.jpg)](https://postimg.cc/zbmhBXRF)  
 
 <hr>
