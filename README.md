@@ -160,3 +160,30 @@ map1
 #### Check the correlation between features
 
 [![img7.png](https://i.postimg.cc/BQkd4r7P/img7.png)](https://postimg.cc/3djLZcT3)
+
+
+#### Machine Learning Modelling
+
+Model|MAE|MSE|RMSE|R2 train|R2 test
+-----|-----|-----|-----|-----|-----|
+XGB tuned scaled|66487.284650 1.402133e+10 1.184117e+05 0.981777 0.893600
+XGB base scaled|69569.713935 1.503096e+10 1.503096e+10 0.972632 0.885938
+Randon Foreset tuned scaled|69802.570105 1.678746e+10 1.295664e+05 0.983968 0.872609
+Random Forest base scaled|71214.631902 1.823581e+10 1.350400e+05 0.982995 0.861618
+KNN base scaled|155308.059422 5.762705e+10 2.400563e+05 0.867006 0.807964
+Polynomial|103559.150503 2.664892e+10 1.632450e+05 0.829347 0.797776
+Decision Tree tuned scaled|90751.214212 2.816666e+10 1.678293e+05 0.912085 0.786258
+Decision Tree base scaled|100267.949160 3.349558e+10 1.830180e+05 0.999994 0.745820
+Lin_Reg|125075.923702 3.903737e+10 1.975788e+05 0.697743 0.703766
+Lasso_scaled|124854.112662 3.904312e+10 1.975933e+05 0.697740 0.703723
+Ridge_scaled|124708.598451 3.903256e+10 1.975666e+05 0.697743 0.703710
+Lin_Reg_scaled|124937.804083 3.904492e+10 1.975979e+05 0.703709 0.703709
+KNN tuned scaled|144453.812460 5.257347e+10 2.292890e+05 0.999994 0.601048
+
+
+# Conclusion
+- Looking at the evaluation table, XGB tuned scaled turns out has the best score, but I have doubts about its reliability. I would prefer the polynomial Linear Regression  but other models might be useful depending to the situation too.
+- bedrooms, bathrooms, sqft_living, floors, waterfront, view, grade, location are have a great impact on house prices.
+
+# Suggestion
+- If your house have more than 2 bedrooms and bathrooms, has a waterfront, has a good quality/grade of building, has a good view andif your house is located around the top 100 most expensive house as shown above, you can sell it with big amount of price.  
