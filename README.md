@@ -126,4 +126,5 @@ plt.xticks(rotation=90)
 - We could see not all house has a basement and from sqft lot shows non positve-linear relationship, which I thought the bigger the sqft lot the higher price it would be.
 
 > Display the area of the houses in Seattle and I marked  
-[![img6.png](https://i.postimg.cc/1tVm5Gcy/img6.png)](https://postimg.cc/S2qFgzvP)
+[![img6.png](https://i.postimg.cc/pX4BmRHx/img6.png)](https://postimg.cc/ZCPNgknD)  
+
