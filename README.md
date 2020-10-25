@@ -125,7 +125,7 @@ plt.xticks(rotation=90)
 - From sqft_living and sqft_above pretty much shown a positive linear relationship.
 - We could see not all house has a basement and from sqft lot shows non positve-linear relationship, which I thought the bigger the sqft lot the higher price it would be.
 
-> Display the area of the houses in Seattle and I marked top 100 most expensive area around the neighborhood.
+> Display the area of the houses in Seattle and I marked top 100 most expensive house area around the neighborhood.
 ```python
 df_new = df[df['price']>=2000000].sort_values('price',ascending=False).head(100)
 df_new.reset_index(inplace=True)
